@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service | Timtech</title>
+<meta name="description" content="Terms of Service for development, design, automation, bot and website services from Timtech. Effective October 8, 2026.">
+<meta name="theme-color" content="#05060a">
+<link rel="icon" href="Tlogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05060a;--panel:#0b0d13;--panel-2:#10131b;
+  --ink:#f3f5fa;--dim:#8c93a4;--faint:#555b6a;
+  --line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.16);
+  --blue:#2f6bff;--blue-2:#5aa2ff;--glow:rgba(47,107,255,.35);
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Manrope',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--blue-2);outline-offset:3px;border-radius:6px}
+::selection{background:var(--blue);color:#fff}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.08}
+
+.ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.ambient::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 70% 50% at 50% 0%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 50% at 50% 0%,#000 20%,transparent 75%);opacity:.5}
+.ambient i{position:absolute;width:560px;height:560px;border-radius:50%;background:#1f4fd8;filter:blur(120px);opacity:.4;top:-260px;right:-120px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;transition:background .35s,backdrop-filter .35s,border-color .35s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(5,6,10,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em}
+.tmark{display:block;aspect-ratio:1430/1075;background:url("Tlogo.png") 32.8% 40%/146.9% auto no-repeat}
+.brand .tmark{width:34px}
+.back{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:999px;border:1px solid var(--line-2);font-weight:600;font-size:14px;transition:background .3s,border-color .3s}
+.back:hover{background:rgba(255,255,255,.05);border-color:var(--ink)}
+.back svg{width:15px;height:15px;transition:transform .3s var(--ease)}
+.back:hover svg{transform:translateX(-3px)}
+
+.top{padding:clamp(130px,16vw,190px) 0 clamp(40px,6vw,70px);border-bottom:1px solid var(--line)}
+.top h1{font-size:clamp(44px,7vw,92px);letter-spacing:-.04em;line-height:1;margin-bottom:26px}
+.top p{color:var(--dim);font-size:clamp(16px,1.6vw,19px);max-width:58ch}
+.dates{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.dates span{font-size:13.5px;color:var(--dim);padding:7px 16px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.03)}
+.dates b{color:var(--ink);font-weight:600}
+
+.layout{display:grid;grid-template-columns:260px 1fr;gap:clamp(40px,7vw,100px);padding:clamp(50px,7vw,90px) 0 clamp(80px,10vw,130px);align-items:start}
+.toc{position:sticky;top:110px}
+.toc h2{font-size:15px;margin-bottom:16px;color:var(--dim);font-weight:600;letter-spacing:0}
+.toc ol{list-style:none;display:grid;gap:2px;border-left:1px solid var(--line)}
+.toc a{display:block;padding:7px 0 7px 18px;margin-left:-1px;border-left:2px solid transparent;font-size:14.5px;color:var(--dim);transition:color .25s,border-color .25s}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);border-left-color:var(--blue-2)}
+
+.doc section{padding:0 0 44px;margin-bottom:44px;border-bottom:1px solid var(--line)}
+.doc section:last-of-type{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.doc h2{font-size:clamp(26px,3vw,36px);margin-bottom:18px;display:flex;gap:16px;align-items:baseline}
+.doc h2 .n{font-size:.55em;color:var(--blue-2);min-width:1.6em}
+.doc p{color:var(--dim);font-size:17px;max-width:68ch;margin-top:14px}
+.doc p:first-of-type{margin-top:0}
+.doc ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px;max-width:68ch}
+.doc li{position:relative;padding-left:26px;color:var(--ink);font-size:16.5px}
+.doc li::before{content:"";position:absolute;left:4px;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--blue-2)}
+.doc .note{margin-top:18px;padding:16px 20px;border:1px solid var(--line-2);border-radius:14px;background:var(--panel);color:var(--ink);font-size:16px}
+.updated{margin-top:40px;color:var(--faint);font-size:14.5px}
+
+.cta{margin-top:50px;padding:34px;border:1px solid var(--line-2);border-radius:24px;background:radial-gradient(ellipse 80% 120% at 50% 130%,rgba(47,107,255,.35),transparent 70%),var(--panel);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h3{font-size:26px;margin-bottom:4px}
+.cta p{margin:0;font-size:15.5px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:15px;background:var(--ink);color:#05060a;transition:transform .3s var(--ease),box-shadow .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px -8px var(--glow),0 0 0 6px rgba(47,107,255,.14)}
+.btn svg{width:16px;height:16px}
+
+footer{border-top:1px solid var(--line);padding:34px 0}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px}
+.legal a:hover{color:var(--ink)}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .toc{position:static}
+  .toc ol{grid-template-columns:1fr 1fr;border-left:0;gap:0 24px}
+  .toc a{border-left:0;padding-left:0;margin:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:560px){
+  .wrap{width:calc(100% - 36px)}
+  .toc ol{grid-template-columns:1fr}
+  .doc h2{gap:10px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i></i></div>
+
+<header id="head">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="index.html" class="brand" aria-label="Timtech home"><span class="tmark" role="img" aria-label="Timtech logo"></span><span>Timtech</span></a>
+      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back to home</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="top">
+    <div class="wrap">
+      <h1>Terms of Service</h1>
+      <p>By requesting or purchasing any development, design, automation, bot, or website service from Timtech, you agree to the following terms.</p>
+      <div class="dates"><span>Effective date: <b>October 8, 2026</b></span><span>Last updated: <b>October 8, 2026</b></span></div>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <aside class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol id="toc">
+        <li><a href="#s1">Communication and planning</a></li>
+        <li><a href="#s2">Upfront payment</a></li>
+        <li><a href="#s3">Remaining payment</a></li>
+        <li><a href="#s4">Delayed or unfinished payments</a></li>
+        <li><a href="#s5">Client delays</a></li>
+        <li><a href="#s6">Revisions and changes</a></li>
+        <li><a href="#s7">Cancellation</a></li>
+        <li><a href="#s8">Ownership and delivery</a></li>
+        <li><a href="#s9">Third-party services</a></li>
+        <li><a href="#s10">Agreement</a></li>
+      </ol>
+    </aside>
+
+    <article class="doc">
+      <section id="s1">
+        <h2><span class="n">1</span>Communication and project planning</h2>
+        <p>Before any work begins, both parties must clearly communicate and agree on the project's requirements, scope, features, pricing, estimated delivery timeline, and other important details.</p>
+        <p>I will make reasonable efforts to understand your requirements before development starts. Changes to the agreed scope may result in additional charges or an updated delivery timeline.</p>
+      </section>
+
+      <section id="s2">
+        <h2><span class="n">2</span>Upfront payment</h2>
+        <p>An agreed upfront payment or deposit is required before work begins.</p>
+        <p>The upfront payment confirms your commitment to the project and allows development to officially begin.</p>
+        <p>For larger projects, a 50% upfront payment may be required, with the remaining balance due according to the agreed payment schedule.</p>
+        <p class="note">No development work is guaranteed to begin until the required upfront payment has been received.</p>
+      </section>
+
+      <section id="s3">
+        <h2><span class="n">3</span>Remaining payment</h2>
+        <p>Any outstanding balance must be paid according to the agreed payment terms.</p>
+        <p>Final files, source code, deployment, credentials, or other deliverables may be withheld until the outstanding balance has been fully paid.</p>
+        <p class="note">No additional work, new features, or new projects will be started while any payment for previous work remains outstanding.</p>
+      </section>
+
+      <section id="s4">
+        <h2><span class="n">4</span>Delayed or unfinished payments</h2>
+        <p>If a client fails to complete an agreed payment, the project may be paused or suspended until payment is received.</p>
+        <p>If payment remains outstanding for an extended period, I reserve the right to:</p>
+        <ul>
+          <li>Suspend further development.</li>
+          <li>Withhold unfinished or final deliverables.</li>
+          <li>Restrict access to project-related services where applicable.</li>
+          <li>Cancel the project.</li>
+          <li>Revoke or remove temporary access, hosting, or services provided by me.</li>
+          <li>Pursue reasonable measures to recover an outstanding payment.</li>
+        </ul>
+        <p class="note">Any work already completed does not become free simply because the project is cancelled or abandoned.</p>
+      </section>
+
+      <section id="s5">
+        <h2><span class="n">5</span>Client delays</h2>
+        <p>If I am waiting for required information, content, credentials, feedback, approvals, or other materials from the client, the delivery timeline may be extended.</p>
+        <p>A project may also be considered inactive if the client becomes unresponsive for an extended period.</p>
+      </section>
+
+      <section id="s6">
+        <h2><span class="n">6</span>Revisions and changes</h2>
+        <p>Reasonable revisions related to the original agreed requirements may be included depending on the service purchased.</p>
+        <p>Requests that significantly change the original project scope may require an additional payment.</p>
+      </section>
+
+      <section id="s7">
+        <h2><span class="n">7</span>Cancellation</h2>
+        <p>If a client cancels a project after development has started, payment for work already completed may still be due.</p>
+        <p>Upfront payments may be non-refundable where development, design, planning, or other project work has already commenced.</p>
+      </section>
+
+      <section id="s8">
+        <h2><span class="n">8</span>Ownership and delivery</h2>
+        <p>Ownership or transfer of the final project, source code, design files, or other deliverables will be handled according to the payment and project agreement.</p>
+        <p>Unless otherwise agreed, full ownership of the final deliverables will only be transferred after all outstanding payments have been settled.</p>
+      </section>
+
+      <section id="s9">
+        <h2><span class="n">9</span>Third-party services</h2>
+        <p>The client is responsible for the cost of third-party services where applicable, including hosting, domains, APIs, premium software, payment processors, or other external services.</p>
+        <p>Third-party outages, policy changes, or service limitations are outside my direct control.</p>
+      </section>
+
+      <section id="s10">
+        <h2><span class="n">10</span>Agreement</h2>
+        <p>By proceeding with a project, making a payment, or requesting work after these terms have been provided, you acknowledge that you have read, understood, and agreed to these Terms of Service.</p>
+        <p>These terms may be updated when necessary. Any significant updates will be communicated through the website or other appropriate communication channels.</p>
+      </section>
+
+      <p class="updated">Last updated: October 8, 2026</p>
+
+      <div class="cta">
+        <div>
+          <h3>Questions before you start?</h3>
+          <p>Ask anything about scope, pricing or timelines. I'm happy to talk it through.</p>
+        </div>
+        <a class="btn" href="https://wa.me/233504919423" target="_blank" rel="noopener">Message me on WhatsApp <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap legal">
+    <span>&copy; <span id="year">2026</span> Timtech. All rights reserved.</span>
+    <span><a href="index.html">Home</a>&emsp;<a href="privacy.html">Privacy</a>&emsp;<a href="mailto:timtechgfx@gmail.com">timtechgfx@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var head = document.getElementById('head');
+  var f = function(){ head.classList.toggle('scrolled', window.scrollY > 24); };
+  f(); window.addEventListener('scroll', f, {passive:true});
+
+  /* highlight the current section in the contents list */
+  var links = document.querySelectorAll('#toc a');
+  var map = {}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('on'); });
+          var a = map[en.target.id]; if (a) a.classList.add('on');
+        }
+      });
+    }, {rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('.doc section').forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
